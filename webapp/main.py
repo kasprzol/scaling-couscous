@@ -9,6 +9,7 @@ app = FastAPI()
 
 @app.get("/info", response_model=InfoResponse, status_code=status.HTTP_200_OK)
 def info():
+    """Simple hello message"""
     return InfoResponse(Receiver="Cisco is the best!")
 
 
@@ -19,6 +20,7 @@ def info():
     responses={status.HTTP_400_BAD_REQUEST: {"model": PingError}},
 )
 async def ping(request: PingRequest):
+    """Download and return the given url"""
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(request.url, ssl=False) as response:
