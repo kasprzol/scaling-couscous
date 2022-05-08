@@ -46,10 +46,7 @@ the problems which may result by upgrading your kernel.
 def test_invalid_certificate():
     """Test that/ping endpoint handles invalid ssl certificates."""
     body = {"url": "https://expired.badssl.com"}
-    response = client.post(
-        "/ping",
-        json=body,
-    )
+    response = client.post("/ping", json=body)
 
     expected = {
         "response": """<!DOCTYPE html>
@@ -85,10 +82,7 @@ def test_invalid_certificate():
     ),
 )
 def test_invalid_request(body, error_type):
-    response = client.post(
-        "/ping",
-        json=body,
-    )
+    response = client.post("/ping", json=body)
     assert response.status_code == HTTPStatus.UNPROCESSABLE_ENTITY
     assert response.json()["detail"][0]["loc"] == ["body", "url"]
     assert response.json()["detail"][0]["type"] == error_type
