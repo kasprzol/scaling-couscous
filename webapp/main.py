@@ -19,7 +19,6 @@ def info():
     responses={status.HTTP_400_BAD_REQUEST: {"model": PingError}},
 )
 async def ping(request: PingRequest):
-    print(f"downloading {request.url}")
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(request.url, ssl=False) as response:
