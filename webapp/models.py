@@ -1,10 +1,10 @@
 from typing import Literal
 
-from pydantic import BaseModel, HttpUrl
+from pydantic import AnyHttpUrl, BaseModel
 
 
 class PingRequest(BaseModel):
-    url: HttpUrl
+    url: AnyHttpUrl
 
 
 class PingResponse(BaseModel):
