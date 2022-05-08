@@ -3,6 +3,11 @@ name = "webpinger_fastapi"
 version = "0.1.0"
 description = "A simple webapi app using FastAPI"
 authors = ["Maciej \"Kasprzol\" Kasprzyk <git_blame@kasprzyk.tech>"]
+readme = "ReadMe.md"
+repository = "https://github.com/kasprzol/scaling-couscous"
+packages = [
+    { include = "webapp" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"

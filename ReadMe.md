@@ -28,5 +28,5 @@ Run the webapp, then go to http://localhost:8000/docs#/
 
 ## Run docker container:
 
-    docker run --rm web_pinger --publish 8000:8000
+    docker run --publish 8000:8000 --rm web_pinger
 
