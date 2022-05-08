@@ -8,6 +8,7 @@ authors = ["Maciej \"Kasprzol\" Kasprzyk <git_blame@kasprzyk.tech>"]
 python = "^3.10"
 fastapi = "^0.76.0"
 uvicorn = {extras = ["standard"], version = "^0.17.6"}
+aiohttp = "^3.8.1"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.19.0"
