@@ -40,7 +40,7 @@ requirements for building and running the kernel, and information about
 the problems which may result by upgrading your kernel.
 """
     }
-    assert response.json(), expected
+    assert response.json() == expected
 
 
 def test_invalid_certificate():
