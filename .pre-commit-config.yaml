@@ -3,7 +3,7 @@ repos:
     rev: v1.3.2
     hooks:
       - id: pycln
-        args: [--config=pyproject.toml]
+        args: [ --config=pyproject.toml ]
   - repo: https://github.com/PyCQA/isort
     rev: 5.10.1
     hooks:
@@ -20,5 +20,10 @@ repos:
     rev: 8.3.8
     hooks:
       - id: pylama
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.32.1
+    hooks:
+      - id: pyupgrade
+        args: [ --py310-plus ]
 default_language_version:
   python: python3.10
